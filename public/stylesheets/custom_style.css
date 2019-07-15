@@ -1,0 +1,67 @@
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .footer{
+        padding: 2rem 0rem 2rem !important;
+    }
+    #myPath2 , #myPath{
+        stroke: #000000;
+        fill:#ffffff;
+        stroke-dasharray: 1800;
+        opacity: 10;
+        animation: animate 6s ease-out infinite;
+    }
+    @keyframes animate{
+        0% {
+            opacity: 5;
+            fill: rgba(255, 255, 255, 0.1);
+            stroke-dashoffset: 1800;
+        }
+
+        30% {
+            opacity: 10;
+            fill: rgba(255, 255, 255, 0.2);
+            stroke-dashoffset: 1200;
+        }
+
+        60% {
+            opacity: 10;
+            fill: rgba(255, 255, 255, 0.3);
+            stroke-dashoffset: 600;
+        }
+
+        90% {
+            opacity: 10;
+            fill: rgba(255, 255, 255, 0.4);
+            stroke-dashoffset: 300;
+        }
+
+        95% {
+            fill: rgba(255, 255, 255, 0.5);
+        }
+
+        100% {
+            opacity: 10;
+            fill: rgba(255, 255, 255, 1);
+            stroke-dashoffset: 150;
+        }
+    }
+    .is-violet-gradient{
+        background-image: linear-gradient(to right top, #051937, #122345, #1e2d54, #2b3863, #384373);
+    }
+    .navbar-item:hover,  .navbar-item:focus-within{
+        background-color :#143153 !important;
+    }
+    .is-darkblue{
+        background-color: #143153 !important;
+    }
+    .is-32px {
+        width: 32px;
+        margin-left: 2%;
+    }
+    .social-icons {
+        fill: #F5F1FC;
+    }
+    .social-icons:hover {
+        fill: #DA4567;
+    }
