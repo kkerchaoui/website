@@ -50,10 +50,10 @@
         background-image: linear-gradient(to right top, #051937, #122345, #1e2d54, #2b3863, #384373);
     }
     .navbar-item:hover,  .navbar-item:focus-within{
-        background-color :#143153 !important;
+        background-color :#F1F1E6 !important;
     }
     .is-darkblue{
-        background-color: #143153 !important;
+        background-color: #F1F1E6 !important;
     }
     .is-32px {
         width: 32px;
