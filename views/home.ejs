@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="./stylesheets/custom_style.css">
   <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js" integrity="sha256-jl1b2Wp4cXCUyX8FxPZ8Z0PPIPV3QYNb/jPSLGDej2c=" crossorigin="anonymous"></script>
@@ -165,7 +165,7 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column  is-6">
-            <form action="/contact" id="contact-form" method="post"  target="_blank" role="form" >
+            <form  id="contact-form" method="post"  onSubmit="return handleSubmit()"  >
               <div class="card">
                 <header class="card-header">
                   <p class="card-header-title">
@@ -195,7 +195,7 @@
                     <div class="field">
                     <label class="label">Phone</label>
                     <p class="control has-icons-right">
-                      <input class="input" type="tel" name="tel" placeholder="Enter your phone number" >
+                      <input class="input" type="tel" name="tel" id="tel" placeholder="Enter your phone number" >
                         <span class="icon is-small is-right">
                         <i class="fas fa-phone-volume"></i>
                       </span>
@@ -230,7 +230,39 @@
         </p>
       </div>
   </footer>
-  <script>
+  <script type="text/javascript">
+    function handleSubmit(){
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const tel = document.getElementById('tel').value;
+
+        axios.post('/contact', {
+          name: name,   
+          email: email,  
+          content: message,
+          tel: tel
+        })
+        .then(function (response) {
+          if (response.data.msg === 'success'){
+                alert("Thanks for your message I'll get back to you shortly !"); 
+                resetForm();
+            }else if(response.data.msg === 'fail'){
+                alert("oops something went wrong")
+            }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+       return false;
+    }
+
+    function resetForm(){
+        document.getElementById('contact-form').reset();
+    }
+
+   
 
     document.addEventListener('DOMContentLoaded', () => {
       // Get all "navbar-burger" elements
