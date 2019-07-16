@@ -165,7 +165,7 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column  is-6">
-            <form action="/contact" id="contact-form" method="post"  target="_blank" >
+            <form action="/contact" id="contact-form" method="post"  target="_blank" role="form" >
               <div class="card">
                 <header class="card-header">
                   <p class="card-header-title">
@@ -177,7 +177,7 @@
                     <div class="field">
                     <label class="label">Name</label>
                     <p class="control has-icons-right">
-                      <input class="input" id="name" placeholder="Enter your name" required>
+                      <input class="input" id="name" name="name" placeholder="Enter your name" required>
                       <span class="icon is-small is-right">
                         <i class="fas fa-user-tie"></i>
                       </span>
@@ -186,7 +186,7 @@
                     <div class="field">
                     <label class="label">Mail</label>
                     <p class="control has-icons-right">
-                      <input class="input" id="email" type="email" placeholder="Enter your mail" required>
+                      <input class="input" id="email" name="email" type="email" placeholder="Enter your mail" required>
                       <span class="icon is-small is-right">
                         <i class="fas fa-at"></i>
                       </span>
@@ -195,7 +195,7 @@
                     <div class="field">
                     <label class="label">Phone</label>
                     <p class="control has-icons-right">
-                      <input class="input" type="tel" placeholder="Enter your phone number" required>
+                      <input class="input" type="tel" name="tel" placeholder="Enter your phone number" >
                         <span class="icon is-small is-right">
                         <i class="fas fa-phone-volume"></i>
                       </span>
@@ -204,7 +204,7 @@
                     <div class="field">
                       <label class="label">Message</label>
                       <p class="control has-icons-right">
-                        <textarea class="textarea" name="body" id="message" placeholder="Enter your message" required></textarea>
+                        <textarea class="textarea" name="message" id="message" placeholder="Enter your message" required></textarea>
                         <span class="icon is-small is-right">
                           <i class="fas fa-pencil-alt"></i>
                         </span>
