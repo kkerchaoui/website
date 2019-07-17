@@ -2,11 +2,17 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+    <!-- Mobile color Android, WP , Ios Safari -->
+  <meta name="theme-color" content="#F1F1E6">
+  <meta name="msapplication-navbutton-color" content="#F1F1E6">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#F1F1E6">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./stylesheets/custom_style.css">
   <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
@@ -44,14 +50,14 @@
           </div>
           <div id="navbarItems" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item" href="#social" style="color: black">
-                Social
+              <a class="navbar-item" href="#social"  >
+              <h5 class="is-darkblue">Social</h5>
               </a>
-              <a class="navbar-item" href="#about" style="color: black">
-                About
+              <a class="navbar-item" href="#about" >
+                  <h5 class="is-darkblue">About</h5>
               </a>
-              <a class="navbar-item" href="#contact" style="color: black" >
-                Contact
+              <a class="navbar-item" href="#contact"  >
+                  <h5 class="is-darkblue">Contact</h5>
               </a>
             </div>
             </div>
@@ -64,13 +70,13 @@
           <div class="container">
             <div class="content has-text-centered">
                 <h5 class="subtitle is-5"  style="color: #DA4567">
-                    <p id="helloWorld">   HELLO WORLD.</p>
+                    <p id="helloWorld" style="font-family: 'Source Code Pro', monospace;">   HELLO WORLD.</p>
                 </h5>
-              <h1 class="title is-1" style="color: #F1F1E6">
+              <h2 class="title is-2" style="color: #F1F1E6; font-family: 'Source Code Pro', monospace;" >
                   I'M KHÉLIL KM
-              </h1>
+              </h2>
               <h6 class="subtitle" style="color: #F1F1E6">
-                  <p id="introSpeech"> </p>
+                  <p id="introSpeech" style="font-family: 'Source Code Pro', monospace;"> </p>
               </h6><br>
             </div>
             <div class="columns is-mobile is-centered">
@@ -154,12 +160,55 @@
     <section class="hero is-light is-fullheight is-bold" id="about">
     <div class="hero-body">
     <div class="container">
-      <h1 class="title has-text-centered">
-          I'M Khélil KM
-      </h1>
-      <h2 class="subtitle has-text-centered">
-          <p id="introSpeech"> </p>
-      </h2>
+      <div class="card">
+        <header class="card-header">
+          <div class="card-content">
+            <h3 class="title is-3 is-darkblue" >About me</h3> 
+          </div>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <div class="columns is-centered">
+              <div class="column  is-6">
+                <div class="content">
+                    <h5 class="subtitle is-5 is-darkblue">Skills</h5> 
+                    <p>You can find listed below, the languages and technologies that I work with. </p>
+                    
+                                <span >C# / VB.NET - 85%</span>
+                                <progress class="progress is-danger is-very-small" value="85" max="100"></progress>
+                              
+                                <span >SQLSERVER - 85%</span>
+                                <progress class="progress is-danger is-very-small" value="85" max="100"></progress>
+                           
+                                <span >ASP.NET - 90%</span>
+                                <progress class="progress is-danger is-very-small" value="90" max="100"></progress>
+
+                                <span >HTML5 - 90%</span>
+                                <progress class="progress is-danger is-very-small" value="90" max="100"></progress>
+
+                                <span >XAML (XAMARIN) - 90%</span>
+                                <progress class="progress is-danger is-very-small" value="90" max="100"></progress>
+                               
+                                <span >JAVASCRIPT - 75%</span>
+                                <progress class="progress is-danger is-very-small" value="75" max="100"></progress>     
+                </div>
+                <br>
+              </div>
+              <div class="column  is-6">
+                  <div class="content">
+                      <h5 class="subtitle is-5 is-darkblue">Profile</h5> 
+                      <p>Hi, I'm Khélil a .NET Web Developer since 4 years. Personally I'm always looking 
+                        for a future challenge, whether in the field of programming or in my other areas of interest.
+                        My other hobbies besides programming, are sports, music and spending time with my family and friends.</p>
+                        <div class="has-text-centered">
+                        <a class="button is-primary is-medium" href="https://drive.google.com/open?id=1mZG7Hfy-kxQm8v5rvaXMi_Qbv-2swNm1"  target="_blank"> Resume</a>
+                   </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
     </section>
@@ -172,7 +221,7 @@
               <div class="card">
                 <header class="card-header">
                   <div class="card-content">
-                    <h3 class="title is-3">Contact</h3> 
+                    <h3 class="title is-3 is-darkblue">Contact me</h3> 
                   </div>
                 </header>
                 <div class="card-content">
@@ -215,8 +264,7 @@
                   </div>
                 </div>
                 <footer class="card-footer">
-                    <!-- <a href="#" class="card-footer-item" type="submit">Save</a> -->
-                    <input  class="button is-primary is-fullwidth is-large" value="SUBMIT" type="submit"/>
+                    <input  class="button is-primary is-fullwidth is-large" value="Submit" type="submit"/>
                 </footer>
               </div>
             </form>

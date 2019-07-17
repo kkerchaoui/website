@@ -1,6 +1,18 @@
-    ::-webkit-scrollbar {
-        display: none;
-    }
+::-webkit-scrollbar {
+    width: 4px;
+    border: 1px solid #d5d5d5;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #2b3863;
+  }
+
     .footer{
         padding: 2rem 0rem 2rem !important;
     }
@@ -46,18 +58,25 @@
             stroke-dashoffset: 150;
         }
     }
+    .navbar {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3) !important;
+    }
     .card{
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(10, 10, 10, 1) !important;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(10, 10, 10, 0) !important;
         border-radius: 10px !important;
+    }
+    .progress.is-very-small {
+        height: 0.3rem;
     }
     .is-violet-gradient{
         background-image: linear-gradient(to right top, #051937, #122345, #1e2d54, #2b3863, #384373);
     }
     .navbar-item:hover,  .navbar-item:focus-within{
         background-color :#F1F1E6 !important;
+        border-bottom: 2px solid #1b506f;
     }
     .is-darkblue{
-        background-color: #F1F1E6 !important;
+        color: #1b506f !important;
     }
     .is-32px {
         width: 32px;
@@ -65,6 +84,12 @@
     }
     .social-icons {
         fill: #F5F1FC;
+    }
+    p, span{
+        font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3, h4, h5, .button{
+        font-family: 'Lobster', cursive;
     }
     .social-icons:hover {
         fill: #DA4567;
