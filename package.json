@@ -1,10 +1,23 @@
 {
-  "name": "mywebsite",
-  "version": "0.0.0",
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My personnal website",
+  "main":"app.js",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkerchaoui/website.git"
+  },
+  "keywords": [],
+  "author": "Khelil Kerchaoui <khelil.k@gmail.com> (https://kkerchaoui.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkerchaoui/website/issues"
+  },
+  "homepage": "https://github.com/kkerchaoui/website",   
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
