@@ -46,6 +46,10 @@
             stroke-dashoffset: 150;
         }
     }
+    .card{
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(10, 10, 10, 1) !important;
+        border-radius: 10px !important;
+    }
     .is-violet-gradient{
         background-image: linear-gradient(to right top, #051937, #122345, #1e2d54, #2b3863, #384373);
     }

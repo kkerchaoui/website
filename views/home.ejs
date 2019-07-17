@@ -59,7 +59,7 @@
         </nav>
   </header>
   <main>
-    <section class="hero is-violet-gradient is-fullheight is-bold" id="social">
+    <section class="hero is-violet-gradient is-fullheight" id="social">
         <div class="hero-body">
           <div class="container">
             <div class="content has-text-centered">
@@ -163,7 +163,7 @@
     </div>
     </div>
     </section>
-    <section class="hero is-dark is-fullheight is-bold" id="contact">
+    <section class="hero is-violet-gradient is-fullheight" id="contact">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
@@ -171,55 +171,52 @@
             <form  id="contact-form" method="post"  onSubmit="return handleSubmit()"  >
               <div class="card">
                 <header class="card-header">
-                  <p class="card-header-title">
-                    Contact me
-                  </p>
+                  <div class="card-content">
+                    <h3 class="title is-3">Contact</h3> 
+                  </div>
                 </header>
                 <div class="card-content">
                   <div class="content">
                     <div class="field">
-                    <label class="label">Name</label>
                     <p class="control has-icons-right">
-                      <input class="input" id="name" name="name" placeholder="Enter your name" required>
-                      <span class="icon is-small is-right">
-                        <i class="fas fa-user-tie"></i>
+                      <input class="input" id="name" name="name" placeholder="Name*" required>
+                      <span class="icon is-small is-right" >
+                        <i class="fas fa-user-tie" style="color:#DA4567"></i>
                       </span>
                     </p>
                     </div>
                     <div class="field">
-                    <label class="label">Mail</label>
                     <p class="control has-icons-right">
-                      <input class="input" id="email" name="email" type="email" placeholder="Enter your mail" required>
-                      <span class="icon is-small is-right">
-                        <i class="fas fa-at"></i>
+                      <input class="input" id="email" name="email" type="email" placeholder="Mail*" required>
+                      <span class="icon is-small is-right" >
+                        <i class="fas fa-at" style="color:#DA4567"></i>
                       </span>
                     </p>
                     </div>
                     <div class="field">
-                    <label class="label">Phone</label>
                     <p class="control has-icons-right">
-                      <input class="input" type="tel" name="tel" id="tel" placeholder="Enter your phone number" >
+                      <input class="input" type="tel" name="tel" id="tel" placeholder="Phone number" >
                         <span class="icon is-small is-right">
-                        <i class="fas fa-phone-volume"></i>
+                        <i class="fas fa-phone-volume" style="color:#DA4567"></i>
                       </span>
                     </p>
                     </div>
                     <div class="field">
-                      <label class="label">Message</label>
                       <p class="control has-icons-right">
-                        <textarea class="textarea" name="message" id="message" placeholder="Enter your message" required></textarea>
-                        <span class="icon is-small is-right">
-                          <i class="fas fa-pencil-alt"></i>
+                        <textarea class="textarea" name="message" id="message" placeholder="Message*" required></textarea>
+                        <span class="icon is-small is-right" >
+                          <i class="fas fa-pencil-alt" style="color:#DA4567"></i>
                         </span>
                       </p>
                     </div>
-                    <div class="field">
-                        <div class="g-recaptcha" data-sitekey="6Lfi_a0UAAAAAEETRQfg9p3w08kykz6TH20LMXM_"></div>
+                    <div style="text-align: center;height: 70px">
+                        <div class="g-recaptcha"  style="display: inline-block;" data-sitekey="6Lfi_a0UAAAAAEETRQfg9p3w08kykz6TH20LMXM_"></div>
                     </div>
                   </div>
                 </div>
                 <footer class="card-footer">
-                    <input  class="button is-primary is-fullwidth" value="SUBMIT" type="submit"/>
+                    <!-- <a href="#" class="card-footer-item" type="submit">Save</a> -->
+                    <input  class="button is-primary is-fullwidth is-large" value="SUBMIT" type="submit"/>
                 </footer>
               </div>
             </form>
@@ -229,7 +226,7 @@
     </div>
     </section>
   </main>
-  <footer class="footer" style="background-color:black;height: 40%;">
+  <footer class="footer" style="background-color:#F1F1E6;height: 40%;">
       <div class="content has-text-centered">
         <p>
             Made with <i class="icon ion-heart"></i> by <b>kkerchaoui</b>
@@ -258,6 +255,7 @@
           else if(response.data.responseSuccess ){
               alert(response.data.responseSuccess);
               resetForm();
+              grecaptcha.reset();
           }
         })
         .catch(function (error) {
