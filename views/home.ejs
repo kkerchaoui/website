@@ -20,6 +20,12 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144091314-1"></script>
+
+
+
+
   <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./stylesheets/custom_style.css">
@@ -310,6 +316,13 @@
     </div>
   </footer>
   <script type="text/javascript">
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-144091314-1');
+
+
     function handleSubmit() {
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
