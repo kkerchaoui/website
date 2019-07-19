@@ -46,7 +46,7 @@ router.post('/', function (req, res) {
         })
       } else {
         res.json({
-          responseSuccess: 'Thanks for your message I\'ll get back to you shortly !'
+          responseSuccess: 'Thanks for your message <br> I\'ll get back to you shortly !'
         })
       }
     });
