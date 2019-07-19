@@ -24,7 +24,8 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144091314-1"></script>
 
 
-
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
 
@@ -339,9 +340,22 @@
         })
         .then(function (response) {
           if (response.data.responseError) {
-            alert(response.data.responseError);
+            Toastify({
+              text: response.data.responseError,
+              duration: 5000,
+              gravity: "top", // `top` or `bottom`
+              position: 'center', // `left`, `center` or `right`
+              backgroundColor: "linear-gradient(to right, #e73827, #f85032)",
+            }).showToast();
           } else if (response.data.responseSuccess) {
-            alert(response.data.responseSuccess);
+            Toastify({
+              text: response.data.responseSuccess,
+              duration: 9000,
+              gravity: "top", // `top` or `bottom`
+              position: 'center', // `left`, `center` or `right`
+              backgroundColor: "linear-gradient(to top, #1d976c, #93f9b9)",
+            }).showToast();
+
             resetForm();
             grecaptcha.reset();
           }
@@ -352,6 +366,10 @@
 
       return false;
     }
+
+
+
+
 
     function resetForm() {
       document.getElementById('contact-form').reset();
