@@ -1,12 +1,18 @@
-#!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
 var app = require('../app');
 var debug = require('debug')('website:server');
-var http = require('http');
+const https = require('https');
+const fs = require('fs');
+
+var key = fs.readFileSync('/etc/nginx/ssl/private_key.key');
+var cert = fs.readFileSync( '/etc/nginx/ssl/certificate.cer' );
+var ca = fs.readFileSync( '/etc/nginx/ssl/certificate_INTERMEDIATE.cer' );
+
+var options = {
+  key: key,
+  cert: cert,
+  ca: ca
+  };
+
 
 /**
  * Get port from environment and store in Express.
@@ -18,8 +24,8 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-
-var server = http.createServer(app);
+var server = https.createServer(options, app);
+// var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
