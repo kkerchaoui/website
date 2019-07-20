@@ -71,7 +71,6 @@
 .navbar {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3) !important;
 }
-
 .card {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(10, 10, 10, 0) !important;
     border-radius: 10px !important;
@@ -88,11 +87,11 @@
 .navbar-item:hover,
 .navbar-item:focus-within {
     background-color: #F1F1E6 !important;
-    border-bottom: 2px solid #1b506f;
+    border-bottom: 4px solid #DA4567;
 }
 
 .is-darkblue {
-    color: #1b506f !important;
+    color: #0d0d0d !important;
 }
 
 .is-32px {
@@ -115,8 +114,38 @@ h3,
 h4,
 h5,
 .button {
-    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold !important;
 }
+
+.is-darkred{
+    background-color: #DA4567 !important;
+    color: white !important;
+}
+.card-footer {
+     border-top: 0px solid #dbdbdb !important; 
+
+}
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #DA4567; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #384373; /* Add a dark-grey background on hover */
+  }
 
 .social-icons:hover {
     fill: #DA4567;
