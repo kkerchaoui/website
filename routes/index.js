@@ -3,14 +3,9 @@ var router = express.Router();
 
 
 
-/* GET home page. */
+/* GET index page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { page: 'Home',menuId:'home' });
-});
-
-/* GET home page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { page: 'About',menuId:'About' });
+  res.render('index');
 });
 
 
