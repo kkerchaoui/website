@@ -19,53 +19,99 @@
     }
 }
 
-.footer {
-    padding: 2rem 0rem 2rem !important;
-}
 
-#myPath2,
-#myPath {
+#littleK {
     stroke: #000000;
-    fill: #ffffff;
+    fill: #DA4567;
     stroke-dasharray: 1800;
     opacity: 10;
-    animation: animate 6s ease-out infinite;
+    animation: animate1 6s ease-out ;
 }
 
-@keyframes animate {
+#bigK {
+    stroke: #000000;
+    fill: #1e2d54;
+    stroke-dasharray: 1800;
+    opacity: 10;
+    animation: animate2 6s ease-out ;
+}
+
+@keyframes animate1 {
     0% {
         opacity: 5;
-        fill: rgba(255, 255, 255, 0.1);
+        fill: rgba(218, 69, 103, 0.1);
         stroke-dashoffset: 1800;
     }
 
     30% {
         opacity: 10;
-        fill: rgba(255, 255, 255, 0.2);
+        fill: rgba(218, 69, 103,  0.2);
         stroke-dashoffset: 1200;
     }
 
     60% {
         opacity: 10;
-        fill: rgba(255, 255, 255, 0.3);
+        fill: rgba(218, 69, 103, 0.3);
         stroke-dashoffset: 600;
     }
 
     90% {
         opacity: 10;
-        fill: rgba(255, 255, 255, 0.4);
+        fill: rgba(218, 69, 103, 0.4);
         stroke-dashoffset: 300;
     }
 
     95% {
-        fill: rgba(255, 255, 255, 0.5);
+        fill: rgba(218, 69, 103, 0.5);
     }
 
     100% {
         opacity: 10;
-        fill: rgba(255, 255, 255, 1);
+        fill: rgba(218, 69, 103, 1);
         stroke-dashoffset: 150;
     }
+}
+
+
+@keyframes animate2 {
+    0% {
+        opacity: 5;
+        fill: rgba(	30, 45, 84, 0.1);
+        stroke-dashoffset: 1800;
+    }
+
+    30% {
+        opacity: 10;
+        fill: rgba(	30, 45, 84,  0.2);
+        stroke-dashoffset: 1200;
+    }
+
+    60% {
+        opacity: 10;
+        fill: rgba(	30, 45, 84, 0.3);
+        stroke-dashoffset: 600;
+    }
+
+    90% {
+        opacity: 10;
+        fill: rgba(	30, 45, 84, 0.4);
+        stroke-dashoffset: 300;
+    }
+
+    95% {
+        fill: rgba(	30, 45, 84, 0.5);
+    }
+
+    100% {
+        opacity: 10;
+        fill: rgba(	30, 45, 84, 1);
+        stroke-dashoffset: 150;
+    }
+}
+
+
+.footer {
+    padding: 2rem 0rem 2rem !important;
 }
 
 .navbar {
@@ -75,7 +121,10 @@
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(10, 10, 10, 0) !important;
     border-radius: 10px !important;
 }
+.card-footer {
+    border-top: 0px solid #dbdbdb !important; 
 
+}
 .progress.is-very-small {
     height: 0.3rem;
 }
@@ -83,26 +132,28 @@
 .is-violet-gradient {
     background-image: linear-gradient(to right top, #051937, #122345, #1e2d54, #2b3863, #384373);
 }
-
+.is-lightdark {
+    color: #0d0d0d !important;
+}
+.is-lightred{
+    background-color: #DA4567 !important;
+    color: white !important;
+}
+.is-32px {
+    width: 32px;
+    margin-left: 2%;
+}
 .navbar-item:hover,
 .navbar-item:focus-within {
     background-color: #F1F1E6 !important;
     border-bottom: 4px solid #DA4567;
 }
-
-.is-darkblue {
-    color: #0d0d0d !important;
-}
-
-.is-32px {
-    width: 32px;
-    margin-left: 2%;
-}
-
 .social-icons {
     fill: #F5F1FC;
 }
-
+.social-icons:hover {
+    fill: #DA4567;
+}
 p,
 span {
     font-family: 'Roboto', sans-serif;
@@ -118,15 +169,7 @@ h5,
     font-weight: bold !important;
 }
 
-.is-darkred{
-    background-color: #DA4567 !important;
-    color: white !important;
-}
-.card-footer {
-     border-top: 0px solid #dbdbdb !important; 
-
-}
-#myBtn {
+#btnTop {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
@@ -143,10 +186,6 @@ h5,
     border-radius: 20px; /* Increase font size */
   }
   
-  #myBtn:hover {
+  #btnTop:hover {
     background-color: #384373; /* Add a dark-grey background on hover */
   }
-
-.social-icons:hover {
-    fill: #DA4567;
-}
