@@ -20,14 +20,14 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144091314-1"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144091314-1"></script>
 
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./stylesheets/custom_style.css">
   <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
@@ -40,7 +40,7 @@
   <title>Full Stack Developer | Khélil KERCHAOUI MATIGNON</title>
 </head>
 
-<body>
+<body class="is-violet-gradient">
   <header>
     <nav class="navbar is-fixed-top is-dark" style="background-color: #F1F1E6" role="navigation"
       aria-label="main navigation">
@@ -91,7 +91,7 @@
     </nav>
   </header>
   <main>
-    <section class="hero is-violet-gradient is-fullheight" id="social">
+    <section class="hero is-fullheight" id="social">
       <div class="hero-body">
         <div class="container">
           <div class="content has-text-centered">
@@ -187,65 +187,141 @@
         </div>
       </div>
     </section>
-    <section class="hero is-light is-fullheight is-bold" id="about">
+    <section class="hero  is-fullheight " id="about">
       <div class="hero-body">
+          <button onclick="topFunction()" id="myBtn" ><i class="fa fa-chevron-up"></i></button>
         <div class="container">
-          <div class="card">
-            <header class="card-header">
-              <div class="card-content">
-                <h3 class="title is-3 is-darkblue">About me</h3>
-              </div>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="columns is-centered">
-                  <div class="column  is-6">
+
+          <div class="columns">
+
+            <div class="column is-6">
+              <div class="card">
+                <header class="card-header">
+                  <div class="card-content">
+                    <h3 class="title is-3 is-darkblue">Skills</h3>
+                  </div>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+
+
                     <div class="content">
-                      <h5 class="subtitle is-5 is-darkblue">Skills</h5>
+                  
                       <p>You can find listed below, the languages and technologies that I work with. </p>
 
-                      <span>C# / VB.NET - 85%</span>
-                      <progress class="progress is-danger is-very-small" value="85" max="100"></progress>
-
-                      <span>SQLSERVER - 85%</span>
-                      <progress class="progress is-danger is-very-small" value="85" max="100"></progress>
-
-                      <span>ASP.NET - 90%</span>
-                      <progress class="progress is-danger is-very-small" value="90" max="100"></progress>
-
-                      <span>HTML5 - 90%</span>
-                      <progress class="progress is-danger is-very-small" value="90" max="100"></progress>
-
-                      <span>XAML (XAMARIN) - 90%</span>
-                      <progress class="progress is-danger is-very-small" value="90" max="100"></progress>
-
-                      <span>JAVASCRIPT - 75%</span>
-                      <progress class="progress is-danger is-very-small" value="75" max="100"></progress>
-                    </div>
-                    <br>
-                  </div>
-                  <div class="column  is-6">
-                    <div class="content">
-                      <h5 class="subtitle is-5 is-darkblue">Profile</h5>
-                      <p>Hi, I'm Khélil a .NET Web Developer since 4 years. Personally I'm always looking
-                        for a future challenge, whether in the field of programming or in my other areas of interest.
-                        My other hobbies besides programming, are sports, music and spending time with my family and
-                        friends.</p>
-                      <div class="has-text-centered">
-                        <a class="button is-primary is-medium"
-                          href="https://drive.google.com/open?id=1mZG7Hfy-kxQm8v5rvaXMi_Qbv-2swNm1" target="_blank">
-                          Resume</a>
+                      <div id="divNone">
+                        <h5 class="subtitle is-6 is-darkblue">Choose a category</h5>
                       </div>
+
+                      <div class="field is-grouped">
+                        <div class="control">
+                          <div class="tags has-addons">
+                            <span class="tag is-dark" id="linkFrontend">Front-end</span>
+                            <a id="checkFrontend" class="tag"><i class="fas fa-check"></i></a>
+                          </div>
+                        </div>
+                        <div class="control">
+                          <div class="tags has-addons">
+                            <span class="tag is-primary" id="linkBackend">Back-end</span>
+                            <a id="checkBackend" class="tag"><i class="fas fa-check"></i></a>
+                          </div>
+                        </div>
+                        <div class="control">
+                          <div class="tags has-addons">
+                            <span class="tag is-link"  id="linkTools">Dev Tools</span>
+                            <a id="checkTools" class="tag"><i class="fas fa-check"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+
+                      <div id="divFrontend" style="display: none">
+                        <span>ASP.NET - 90%</span>
+                        <progress class="progress is-dark is-very-small" value="90" max="100"></progress>
+
+                        <span>HTML5 - 90%</span>
+                        <progress class="progress is-dark is-very-small" value="90" max="100"></progress>
+
+                        <span>XAML (XAMARIN) - 90%</span>
+                        <progress class="progress is-dark is-very-small" value="90" max="100"></progress>
+
+
+                        <span>JAVASCRIPT - 75%</span>
+                        <progress class="progress is-dark is-very-small" value="75" max="100"></progress>
+                      </div>
+
+
+                      <div id="divBackend" style="display: none">
+                        <span>C# / VB.NET - 85%</span>
+                        <progress class="progress is-primary is-very-small" value="85" max="100"></progress>
+
+
+                        <span>SQLSERVER - 85%</span>
+                        <progress class="progress is-primary is-very-small" value="85" max="100"></progress>
+
+
+                        <span>JAVASCRIPT (NodeJs) - 75%</span>
+                        <progress class="progress is-primary is-very-small" value="75" max="100"></progress>
+
+                     
+                      </div>
+
+
+                      <div id="divTools" style="display: none">
+                        <span >BOOTSTRAP - 85%</span>
+                        <progress class="progress is-link is-very-small" value="85" max="100"></progress>
+
+                        <span>BULMA - 85%</span>
+                        <progress class="progress is-link is-very-small" value="75" max="100"></progress>
+
+                        <span>GIT - 85%</span>
+                        <progress class="progress is-link is-very-small" value="85" max="100"></progress>
+                      </div>
+
+
                     </div>
+
+
+
+
                   </div>
                 </div>
               </div>
             </div>
+            <div class="column is-6">
+              <div class="card">
+                <header class="card-header">
+                  <div class="card-content">
+                    <h3 class="title is-3 is-darkblue">Profile</h3>
+                  </div>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <div class="content">
+                   
+                      <p>Hi, I'm Khélil a .NET Web Developer since 4 years. Personally I'm always looking
+                        for a future challenge, whether in the field of programming or in my other areas of interest.
+                        My other hobbies besides programming, are sports, music and spending time with my family and
+                        friends.</p>
+                    </div>
+
+
+                  </div>
+                </div>
+                <footer class="card-footer">
+                    <a class="button is-darkred is-fullwidth is-large"
+                    href="https://drive.google.com/open?id=1mZG7Hfy-kxQm8v5rvaXMi_Qbv-2swNm1" target="_blank">
+                    Resume</a>
+                  </footer>
+              </div>
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>
-    <section class="hero is-violet-gradient is-fullheight" id="contact">
+    <section class="hero  is-fullheight" id="contact">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
@@ -263,7 +339,7 @@
                         <p class="control has-icons-right">
                           <input class="input" id="name" name="name" placeholder="Name*" required>
                           <span class="icon is-small is-right">
-                            <i class="fas fa-user-tie" style="color:#DA4567"></i>
+                            <i class="fas fa-user-tie" ></i>
                           </span>
                         </p>
                       </div>
@@ -271,7 +347,7 @@
                         <p class="control has-icons-right">
                           <input class="input" id="email" name="email" type="email" placeholder="Mail*" required>
                           <span class="icon is-small is-right">
-                            <i class="fas fa-at" style="color:#DA4567"></i>
+                            <i class="fas fa-at" ></i>
                           </span>
                         </p>
                       </div>
@@ -279,7 +355,7 @@
                         <p class="control has-icons-right">
                           <input class="input" type="tel" name="tel" id="tel" placeholder="Phone number">
                           <span class="icon is-small is-right">
-                            <i class="fas fa-phone-volume" style="color:#DA4567"></i>
+                            <i class="fas fa-phone-volume"></i>
                           </span>
                         </p>
                       </div>
@@ -288,7 +364,7 @@
                           <textarea class="textarea" name="message" id="message" placeholder="Message*"
                             required></textarea>
                           <span class="icon is-small is-right">
-                            <i class="fas fa-pencil-alt" style="color:#DA4567"></i>
+                            <i class="fas fa-pencil-alt" ></i>
                           </span>
                         </p>
                       </div>
@@ -299,7 +375,7 @@
                     </div>
                   </div>
                   <footer class="card-footer">
-                    <input class="button is-primary is-fullwidth is-large" value="Send" type="submit" />
+                    <input class="button is-darkred is-fullwidth is-large" value="Send" type="submit" />
                   </footer>
                 </div>
               </form>
@@ -317,11 +393,82 @@
     </div>
   </footer>
   <script type="text/javascript">
-
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
     gtag('config', 'UA-144091314-1');
+
+
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(topFunction);
+    window.scrollTo(0, c - c / 8);
+  }
+}
+
+    document.getElementById("linkFrontend").onclick = function () {
+      document.getElementById("linkFrontend").classList.remove("is-dark");
+      document.getElementById("checkFrontend").classList.add("is-dark");
+
+      document.getElementById("checkBackend").classList.remove("is-primary");
+      document.getElementById("linkBackend").classList.add("is-primary");
+
+      document.getElementById("checkTools").classList.remove("is-link");
+      document.getElementById("linkTools").classList.add("is-link");
+
+      document.getElementById("divFrontend").style.display = 'block';
+      document.getElementById("divBackend").style.display = 'none';
+      document.getElementById("divTools").style.display = 'none';
+      document.getElementById("divNone").style.display = 'none';
+    }
+    document.getElementById("linkBackend").onclick = function () {
+      document.getElementById("linkBackend").classList.remove("is-primary");
+      document.getElementById("checkBackend").classList.add("is-primary");
+
+      document.getElementById("checkFrontend").classList.remove("is-dark");
+      document.getElementById("linkFrontend").classList.add("is-dark");
+
+      document.getElementById("checkTools").classList.remove("is-link");
+      document.getElementById("linkTools").classList.add("is-link");
+
+      document.getElementById("divBackend").style.display = 'block';
+      document.getElementById("divFrontend").style.display = 'none';
+      document.getElementById("divTools").style.display = 'none';
+      document.getElementById("divNone").style.display = 'none';
+    }
+    document.getElementById("linkTools").onclick = function () {
+      document.getElementById("linkTools").classList.remove("is-link");
+      document.getElementById("checkTools").classList.add("is-link");
+
+
+      document.getElementById("checkFrontend").classList.remove("is-dark");
+      document.getElementById("linkFrontend").classList.add("is-dark");
+
+      document.getElementById("checkBackend").classList.remove("is-primary");
+      document.getElementById("linkBackend").classList.add("is-primary");
+
+
+      document.getElementById("divTools").style.display = 'block';
+      document.getElementById("divBackend").style.display = 'none';
+      document.getElementById("divFrontend").style.display = 'none';
+      document.getElementById("divNone").style.display = 'none';
+    }
 
 
     function handleSubmit() {
