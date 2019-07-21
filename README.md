@@ -15,7 +15,7 @@ npm install
 
 ### III - Modify & Rename
 
-*/config/config.ss*
+*/config/config.js*
 
 **rename:** ```touch config/config_example.js config/config.js```
 
