@@ -1,7 +1,7 @@
-# website
+# Single Page App
 Single page app using NodeJs & EJS based on Bulma
 
-# How to
+# HOW TO - 5 STEPS
 
 ## I - Clone repo
 ```
