@@ -3,7 +3,7 @@ const debug = require('debug')('website:server');
 const https = require('https');
 const fs = require('fs');
 
-//  Uncomment HTTP lines if you don't need ssl
+//  Uncomment HTTP lines if you don't need ssl (l7, l31 )
 // const http = require('http');
 
 //Use your own ssl certificates and key
