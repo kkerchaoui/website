@@ -1,7 +1,7 @@
 # website
-Website using NodeJs  &amp; EJS
+Single page app using NodeJs & EJS based on Bulma
 
-## How to
+# How to
 
 ## I - Clone repo
 
@@ -23,7 +23,10 @@ npm install
 
 **description:** This file mainly contain server configuration, in this one you'll choose between using https / http . If you want to use HTTP, you only have to uncomment the right http lines and comment the https ones. However, to use HTTPS you have to modify path to your own ssl certificates.
 
-
 ### IV - Lauch the website
 
 npm start
+
+### V - Use it
+
+Open a browser and go to localhost:3000
