@@ -3,6 +3,10 @@ const debug = require('debug')('website:server');
 const https = require('https');
 const fs = require('fs');
 
+//  Uncomment HTTP lines if you don't need ssl
+// const http = require('http');
+
+//Use your own ssl certificates and key
 const key = fs.readFileSync('/etc/nginx/ssl/private_key.key');
 const cert = fs.readFileSync('/etc/nginx/ssl/certificate.cer');
 const ca = fs.readFileSync('/etc/nginx/ssl/certificate_INTERMEDIATE.cer');
@@ -20,10 +24,11 @@ const options = {
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-/**
- * Create HTTPS server.
- */
-const server = https.createServer(options, app);
+//Create https server
+const server = http.createServer(app, options);
+
+//Create http server
+// const server = http.createServer(app);
 
 
 /**
