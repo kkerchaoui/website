@@ -25,7 +25,7 @@ npm install
 
 >**description:** This file mainly contain server configuration, in this one you'll choose between using https / http . If you want to use HTTP, you only have to uncomment the right http lines and comment the https ones. However, to use HTTPS you have to modify path to your own ssl certificates.
 
-### IV - Lauch the website
+### IV - Launch the website
 ```
 npm start
 ```
