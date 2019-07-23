@@ -32,4 +32,4 @@ npm start
 
 ### V - Use it
 
-Open a browser and go to localhost:3000
+Open a browser and go to http://localhost:3000
