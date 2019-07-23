@@ -1,7 +1,7 @@
 # [Website](https://kkerchaoui.com/)
 Single page app using NodeJs & EJS based on Bulma
 
-# QUICKSTART - 5 STEPS
+# Quickstart - 5 Steps
 
 ## I - Clone repo
 ```
