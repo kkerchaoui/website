@@ -25,7 +25,7 @@ const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 //Create https server
-const server = http.createServer(app, options);
+const server = https.createServer(options, app);
 
 //Create http server
 // const server = http.createServer(app);
